@@ -5,90 +5,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Workflow AI — your website inventory, ready for Marketplace every morning</title>
 <meta name="description" content="Workflow AI is a monthly software subscription for used-car dealers. Every night it reads the vehicles on your website and prepares the listing text, photos and a posting plan for Facebook Marketplace.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173d52'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='34' font-weight='700' text-anchor='middle' fill='%238dceca'%3EW%3C/text%3E%3C/svg%3E">
-<style>
-:root{--navy:#173d52;--teal:#1f7a78;--mint:#8dceca;--ink:#1f2328;--muted:#5d6b75;--line:#dde4e8;--bg:#f6f8fa}
-*{box-sizing:border-box}body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff}
-a{color:var(--teal)}h1,h2,h3{line-height:1.2;margin:0 0 12px}h1{font-size:40px;letter-spacing:-.5px}h2{font-size:28px}h3{font-size:19px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{background:var(--navy);color:#e9f0f4}header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;color:#fff;text-decoration:none}.brand span{width:34px;height:34px;border:1px solid #7ea1ab;border-radius:10px;display:grid;place-items:center;color:var(--mint)}
-header nav a{color:#c8d6df;text-decoration:none;margin-left:22px;font-size:15px}header nav a:hover{color:#fff}
-.hero{background:linear-gradient(180deg,var(--navy) 0%,#1e4d66 100%);color:#e9f0f4;padding:72px 0 64px}.hero p{font-size:20px;color:#c8d6df;max-width:640px;margin:0 0 28px}
-.cta{display:inline-block;background:var(--mint);color:#0f2b3a;font-weight:700;padding:14px 22px;border-radius:8px;text-decoration:none}.cta.secondary{background:transparent;color:#fff;border:1px solid #7ea1ab;margin-left:10px}
-section{padding:56px 0}section.alt{background:var(--bg)}.lead{color:var(--muted);max-width:720px;margin-bottom:28px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}.card .n{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--navy);color:var(--mint);font-weight:700;margin-bottom:12px}
-.plans .card{display:flex;flex-direction:column}.price{font-size:34px;font-weight:700;margin:8px 0 2px}.price small{font-size:15px;font-weight:400;color:var(--muted)}.plan-note{color:var(--muted);font-size:15px;margin:0 0 16px}.plans ul{padding-left:18px;margin:0 0 20px;color:#3b4a55}.plans .cta{margin-top:auto;text-align:center}.yearly{display:block;font-size:14px;color:var(--muted);margin-top:10px;text-align:center}
-.featured{border-color:var(--teal);box-shadow:0 8px 30px #173d5214}.tag{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);font-weight:700}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}.check li{margin:6px 0}
-details{border-top:1px solid var(--line);padding:14px 0}details:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:600}details p{color:#3b4a55;margin:10px 0 0}
-footer{background:var(--navy);color:#aabecb;padding:36px 0;font-size:14px}footer a{color:#c8d6df}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:800px){h1{font-size:32px}.grid,.two{grid-template-columns:1fr}header nav a{margin-left:14px}.cta.secondary{margin:10px 0 0;display:inline-block}}
-</style>
+<meta name="theme-color" content="#0d1b2a">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<header><div class="wrap">
-  <a class="brand" href="#"><span>W</span>Workflow AI</a>
-  <nav><a href="#how">How it works</a><a href="#plans">Plans</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
-</div></header>
+<a class="skip" href="#main">Skip to content</a>
 
-<section class="hero"><div class="wrap">
-  <h1>Your website inventory, ready for Marketplace every morning.</h1>
-  <p>Workflow AI is software for independent used-car dealers. Every night it reads the vehicles on your own website and prepares the listing text, the photos and a posting plan for Facebook Marketplace — so your lot and your listings always match.</p>
-  <a class="cta" href="#plans">See plans</a><a class="cta secondary" href="#how">How it works</a>
-</div></section>
+<header class="wf-header wf-header--site"><div class="wf-header__inner">
+    <a class="wf-header__brand" href="/"><img src="/assets/img/workflow-ai-wordmark-reverse.svg" alt="Workflow AI" width="173" height="36"></a>
+    <nav aria-label="Site"><a href="#how">How it works</a><a href="#plans">Plans</a><a href="#faq">Questions</a><a href="#contact">Contact</a></nav>
+  </div></header>
 
-<section id="how"><div class="wrap">
+<main id="main">
+<div class="band">
+  <div class="wrap hero">
+    <div class="hero__copy">
+      <p class="eyebrow">For independent used-car dealers</p>
+      <h1>It works the night shift. You check it at 7.</h1>
+      <p class="hero__lead">Workflow AI is software for independent used-car dealers. Every night it reads the vehicles on your own website and prepares the listing text, the photos and a posting plan for Facebook Marketplace, so your lot and your listings always match.</p>
+      <div class="actions"><a class="wf-btn wf-btn--primary wf-btn--lg" href="#plans">See plans</a><a class="wf-btn wf-btn--night wf-btn--lg" href="#how">How it works</a></div>
+    </div>
+    <figure class="hero__shot">
+      <picture>
+        <source srcset="/assets/img/status-page-dark.webp" media="(prefers-color-scheme: dark)">
+        <img src="/assets/img/status-page-light.webp" width="1040" height="1622" alt="The Workflow AI status page: Apex Auto, last run OK, 47 listings ready of a 50-vehicle plan, finished at 2:34 AM. Today's plan: 3 new to post, 41 to renew, 2 to mark sold, 1 held.">
+      </picture>
+      <figcaption>The status page a dealer opens each morning (sample figures).</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap night">
+    <h2 class="sr-only">One night, start to finish</h2>
+    <ol class="wf-timeline">
+      <li><span class="wf-timeline__time">2:30 AM</span><span class="wf-timeline__text">Reads every vehicle on your website</span></li>
+      <li><span class="wf-timeline__time">2:33 AM</span><span class="wf-timeline__text">Writes a listing and saves the photos for each one</span></li>
+      <li><span class="wf-timeline__time">2:34 AM</span><span class="wf-timeline__text">Builds today's plan: post, renew, mark sold</span></li>
+      <li class="is-morning"><span class="wf-timeline__time">7:00 AM</span><span class="wf-timeline__text">You open one page and see if it worked</span></li>
+    </ol>
+  </div>
+</div>
+
+<section class="section" id="how"><div class="wrap">
   <h2>How it works</h2>
   <p class="lead">It installs on one computer at the dealership and runs by itself overnight. Nothing to type in, no spreadsheets to keep up with.</p>
-  <div class="grid">
-    <div class="card"><div class="n">1</div><h3>Reads your website</h3><p>Each night it pulls every vehicle your site shows for sale — year, make, model, trim, price, mileage, VIN and photos — straight from the pages your customers see.</p></div>
-    <div class="card"><div class="n">2</div><h3>Prepares the listings</h3><p>One listing per vehicle, written from the facts on your site: a clean headline, miles and price, your standing statements, the VIN and your sign-off. Photos are saved alongside, in order.</p></div>
-    <div class="card"><div class="n">3</div><h3>Builds the day's plan</h3><p>What to post, what to renew and what to mark sold — based on what changed on your website. Your posting tool or your team works from that plan each morning.</p></div>
+  <div class="cards">
+    <div class="wf-card"><p class="step">Step 1</p><h3>Reads your website</h3><p>Each night it pulls every vehicle your site shows for sale — year, make, model, trim, price, mileage, VIN and photos — straight from the pages your customers see.</p></div>
+    <div class="wf-card"><p class="step">Step 2</p><h3>Prepares the listings</h3><p>One listing per vehicle, written from the facts on your site: a clean headline, miles and price, your standing statements, the VIN and your sign-off. Photos are saved alongside, in order.</p></div>
+    <div class="wf-card"><p class="step">Step 3</p><h3>Builds the day's plan</h3><p>What to post, what to renew and what to mark sold — based on what changed on your website. Your posting tool or your team works from that plan each morning.</p></div>
   </div>
 </div></section>
 
-<section class="alt" id="plans"><div class="wrap">
+<section class="section section--alt" id="plans"><div class="wrap">
   <h2>Plans</h2>
   <p class="lead">Priced by the size of your lot. One subscription covers one location; add locations at checkout. Pay yearly and get two months free. Cancel any time from your billing portal. Subscriptions are governed by the <a href="/terms.html">Dealer Subscription Agreement</a>.</p>
-  <div class="grid plans">
-    <div class="card featured"><span class="tag">Most independents</span><h3>Independent</h3><div class="price">$1,200<small> / month</small></div><p class="plan-note">Up to 50 vehicles</p>
+  <div class="cards">
+    <div class="wf-card wf-card--featured plan">
+      <p class="wf-card__eyebrow">Most independents</p><h3 class="wf-card__title">Independent</h3>
+      <div class="plan__price">$1,200<small> / month</small></div><p class="plan__note">Up to 50 vehicles</p>
       <ul><li>Nightly website sync</li><li>Listing text and photos for every vehicle</li><li>Daily posting plan</li><li>Status page: is it working?</li><li>Email support</li></ul>
-      <a class="cta" href="https://buy.stripe.com/cNi28s6HkahueNbapl9Zm00">Start — monthly</a><a class="yearly" href="https://buy.stripe.com/5kQdRa5DgcpC34t2WT9Zm01">or $12,000 / year (2 months free)</a></div>
-    <div class="card"><span class="tag">Larger lots</span><h3>Dealer</h3><div class="price">$1,600<small> / month</small></div><p class="plan-note">51 to 150 vehicles</p>
+      <div class="plan__buy"><a class="wf-btn wf-btn--solid wf-btn--block" href="https://buy.stripe.com/cNi28s6HkahueNbapl9Zm00">Start — monthly</a><a class="plan__yearly" href="https://buy.stripe.com/5kQdRa5DgcpC34t2WT9Zm01">or $12,000 / year (2 months free)</a></div>
+    </div>
+    <div class="wf-card plan">
+      <p class="wf-card__eyebrow">Larger lots</p><h3 class="wf-card__title">Dealer</h3>
+      <div class="plan__price">$1,600<small> / month</small></div><p class="plan__note">51 to 150 vehicles</p>
       <ul><li>Everything in Independent</li><li>Up to 150 vehicles listed</li></ul>
-      <a class="cta" href="https://buy.stripe.com/3cIfZic1E3T60Wl5519Zm02">Start — monthly</a><a class="yearly" href="https://buy.stripe.com/28E9AU9TwfBO34t8hd9Zm03">or $16,000 / year (2 months free)</a></div>
-    <div class="card"><span class="tag">High volume</span><h3>Franchise</h3><div class="price">$2,400<small> / month</small></div><p class="plan-note">151 to 500 vehicles</p>
+      <div class="plan__buy"><a class="wf-btn wf-btn--secondary wf-btn--block" href="https://buy.stripe.com/3cIfZic1E3T60Wl5519Zm02">Start — monthly</a><a class="plan__yearly" href="https://buy.stripe.com/28E9AU9TwfBO34t8hd9Zm03">or $16,000 / year (2 months free)</a></div>
+    </div>
+    <div class="wf-card plan">
+      <p class="wf-card__eyebrow">High volume</p><h3 class="wf-card__title">Franchise</h3>
+      <div class="plan__price">$2,400<small> / month</small></div><p class="plan__note">151 to 500 vehicles</p>
       <ul><li>Everything in Independent</li><li>Up to 500 vehicles listed</li></ul>
-      <a class="cta" href="https://buy.stripe.com/eVqbJ2aXA4Xa8oNgNJ9Zm04">Start — monthly</a><a class="yearly" href="https://buy.stripe.com/7sY6oIfdQ3T648x8hd9Zm05">or $24,000 / year (2 months free)</a></div>
+      <div class="plan__buy"><a class="wf-btn wf-btn--secondary wf-btn--block" href="https://buy.stripe.com/eVqbJ2aXA4Xa8oNgNJ9Zm04">Start — monthly</a><a class="plan__yearly" href="https://buy.stripe.com/7sY6oIfdQ3T648x8hd9Zm05">or $24,000 / year (2 months free)</a></div>
+    </div>
   </div>
-  <p class="lead" style="margin-top:24px">Each plan allows 10% over its vehicle count before anything changes. More than 500 vehicles, or several locations under one agreement? <a href="#contact">Talk to us.</a></p>
+  <p class="fineprint">Each plan allows 10% over its vehicle count before anything changes. More than 500 vehicles, or several locations under one agreement? <a href="#contact">Talk to us.</a></p>
 </div></section>
 
-<section><div class="wrap two">
-  <div><h2>What you get</h2>
-    <ul class="check"><li>A Windows program installed in about ten minutes, with a license code from your subscription.</li><li>A nightly run at the time you choose; the PC wakes up for it.</li><li>Listings written only from facts stated on your website — nothing invented.</li><li>A status page that tells you, in plain words, whether last night worked and why any vehicle was held back.</li><li>Automatic updates.</li></ul></div>
-  <div><h2>What we don't do</h2>
-    <ul class="check"><li>We don't post to Facebook for you and we never touch your Facebook account. Posting is done by your team or by a posting tool of your choice, working from the plan Workflow AI prepares.</li><li>We don't change your website. If a vehicle page is missing a price, mileage or VIN, that vehicle is held and the status page tells you.</li><li>We don't keep your inventory in the cloud — it stays on your computer.</li></ul></div>
+<section class="section"><div class="wrap">
+  <div class="cards">
+    <div class="wf-card"><h2 class="wf-card__title card-title-lg">What you get</h2>
+      <ul class="ticks"><li>A Windows program installed in about ten minutes, with a license code from your subscription.</li><li>A nightly run at the time you choose; the PC wakes up for it.</li><li>Listings written only from facts stated on your website — nothing invented.</li><li>A status page that tells you, in plain words, whether last night worked and why any vehicle was held back.</li><li>Automatic updates.</li></ul></div>
+    <div class="wf-card"><h2 class="wf-card__title card-title-lg">What we don't do</h2>
+      <ul class="ticks ticks--not"><li>We don't post to Facebook for you and we never touch your Facebook account. Posting is done by your team or by a posting tool of your choice, working from the plan Workflow AI prepares.</li><li>We don't change your website. If a vehicle page is missing a price, mileage or VIN, that vehicle is held and the status page tells you.</li><li>We don't keep your inventory in the cloud — it stays on your computer.</li></ul></div>
+  </div>
 </div></section>
 
-<section class="alt" id="faq"><div class="wrap">
+<section class="section section--alt" id="faq"><div class="wrap">
   <h2>Questions</h2>
-  <details><summary>Will it work with my website?</summary><p>Most dealer websites, yes — including sites built on Carsforsale.com, Dealer Car Search, DealerOn and similar platforms. Before you install, we check your site and tell you exactly what it can and cannot read. Sites that block automated visitors cannot be read.</p></details>
-  <details><summary>What does a listing look like?</summary><p>Year make model and trim, then miles and price, your standing statements (for example clean title, recently serviced, passed inspection), the VIN and your dealership's sign-off — the same for every vehicle, so your listings look consistent.</p></details>
-  <details><summary>What happens if my inventory grows past my plan?</summary><p>Up to 10% over, nothing changes — you'll see a note on the status page and we'll reach out about the next plan. Beyond that, the plan keeps the vehicles it covers and holds the rest until the plan is upgraded. Nothing already listed is pulled.</p></details>
-  <details><summary>Can I cancel?</summary><p>Yes, any time from your billing portal or by emailing us. The software keeps working until the end of the period you've paid for.</p></details>
-  <details><summary>Where does my data go?</summary><p>Your inventory, listings and plans stay on your computer. Our server only sees your license code, the dealership name and website, how many vehicles are listed, and the time of each nightly check-in.</p></details>
+  <div class="faq">
+    <details><summary>Will it work with my website?</summary><p>Most dealer websites, yes — including sites built on Carsforsale.com, Dealer Car Search, DealerOn and similar platforms. Before you install, we check your site and tell you exactly what it can and cannot read. Sites that block automated visitors cannot be read.</p></details>
+    <details><summary>What does a listing look like?</summary><p>Year make model and trim, then miles and price, your standing statements (for example clean title, recently serviced, passed inspection), the VIN and your dealership's sign-off — the same for every vehicle, so your listings look consistent.</p></details>
+    <details><summary>What happens if my inventory grows past my plan?</summary><p>Up to 10% over, nothing changes — you'll see a note on the status page and we'll reach out about the next plan. Beyond that, the plan keeps the vehicles it covers and holds the rest until the plan is upgraded. Nothing already listed is pulled.</p></details>
+    <details><summary>Can I cancel?</summary><p>Yes, any time from your billing portal or by emailing us. The software keeps working until the end of the period you've paid for.</p></details>
+    <details><summary>Where does my data go?</summary><p>Your inventory, listings and plans stay on your computer. Our server only sees your license code, the dealership name and website, how many vehicles are listed, and the time of each nightly check-in.</p></details>
+  </div>
 </div></section>
 
-<section id="contact"><div class="wrap">
+<section class="section" id="contact"><div class="wrap">
   <h2>Contact</h2>
-  <p class="lead">Questions before you start, a custom agreement for several locations, or help after install: <a href="mailto:support@dailyworkflows.ai">support@dailyworkflows.ai</a> · <a href="tel:+18438269662">(843) 826-9662</a></p>
+  <p class="lead">Questions before you start, a custom agreement for several locations, or help after install.</p>
+  <p class="contact"><a href="mailto:support@dailyworkflows.ai">support@dailyworkflows.ai</a><a href="tel:+18438269662">(843) 826-9662</a></p>
 </div></section>
+</main>
 
-<footer><div class="wrap">
-  <div>Workflow AI Solutions LLC · 8692 Windsor Hill Boulevard, North Charleston, SC 29420</div>
-  <div><a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a> · Payments by Stripe. Facebook and Marketplace are trademarks of Meta Platforms, Inc.; Workflow AI is not affiliated with Meta.</div>
+<footer class="footer"><div class="wrap footer__inner">
+  <div>
+    <img src="/assets/img/workflow-ai-wordmark-reverse.svg" alt="Workflow AI" width="135" height="28">
+    <p>Workflow AI Solutions LLC · 8692 Windsor Hill Boulevard, North Charleston, SC 29420</p>
+  </div>
+  <div>
+    <nav aria-label="Legal"><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav>
+    <p>Payments by Stripe. Facebook and Marketplace are trademarks of Meta Platforms, Inc.; Workflow AI is not affiliated with Meta.</p>
+  </div>
 </div></footer>
 </body>
 </html>
